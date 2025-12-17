@@ -8,7 +8,7 @@ from goodvibes.shop.models import Customer, Order, OrderItem, Product
 
 
 class Command(BaseCommand):
-    help = "Simulate a biased workload to exercise only a subset of indexes."
+    help = "Simulate a biased READ workload to exercise only a subset of indexes (does not create bloat)."
 
     def add_arguments(self, parser):
         parser.add_argument("--seconds", type=int, default=60, help="Duration to run load")
